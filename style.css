@@ -45,11 +45,11 @@ body {
 .banner {
     height: 200px;
     width: auto;
-    /* margin-top: 60px; */
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(45deg , white, blue);
+    background: linear-gradient(45deg , rgb(251, 201, 201), blue);
+
 }
 .banner h1 {
     color: #d5d6d6;
@@ -75,10 +75,16 @@ body {
     padding: 10px;
 }
 .container .contain-box .box {
+    position: relative;
     border-radius: 5px;
     background: #ffffff;
     text-align: center;
     padding: 30px 20px;
+}
+.container .contain-box .box:hover {
+    box-shadow: 5px 5px 10px rgba(0,0,0,.1);
+    transform: scale(1.02);
+    transition: .5s;
 }
 .container .contain-box .box img {
     height: 80px;
@@ -91,35 +97,60 @@ body {
     font-size: 12px;
     font-weight: 300;
 }
-.prise {
+/* PrixTotal */
+.amount {
+    width: 150px;
+    height: 30px;
+    display: flex;
+    margin-left: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 500;
+    background: linear-gradient(45deg , rgb(251, 201, 201), blue);
+
+}
+.price {
     font-size: 17px;
-    font-weight: 550;
+    font-weight: 400;
     display: inline-block;
     margin-top: 20px;
+    border-bottom: 1px solid rgba(0,0,0,.5);
 }
-.btn {
-    width: auto;
-    padding: 10px;
+.element {
     border-radius: 7px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 30px ;
-    background: #f0ecec;
+    margin-top: 30px;
+    padding: 0 66px;
 }
-.num {
-    font-size: 23px;
+/* button */
+button {
+    height: 30px;
+    width: 30px;
+    font-size: 18px;
     font-weight: 550;
-    padding: 0 30px;
-    border-left: 1px solid #0003 ;
-    border-right: 1px solid #0003 ;
-}
-.minus, .plus {
-    font-size: 30px;
-    font-weight: 550;
+    background: #BDC3C7;
+    border: none;
     cursor: pointer;
 }
-
+button:hover {
+    color: #ffffff;
+    border: none;
+    background: linear-gradient(45deg , white, blue);
+    border-radius: 30px;
+    transition: .3s;
+}
+.num {
+    font-size: 18px;
+    font-weight: 550;
+}
+.like {
+    position: absolute;
+    top: 20px;
+}
 .fa-solid {
     cursor: pointer;
     font-size: 20px;

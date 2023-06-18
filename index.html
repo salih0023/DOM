@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <title>Workshop-DOM</title>
@@ -26,6 +32,11 @@
     <section>
         <div class="container">
             <h1 class="products">Our products</h1>
+            <div class="amount">
+                <i class="fa-solid fa-hand-holding-dollar" style="color: #ffffff;"> : </i>
+                <Span id="prixTotal">0</Span>
+                <span>XOF</span>
+            </div>
             <!--Conteneur dex box-->
             <div class="contain-box">
                 <!--box-1-->
@@ -33,13 +44,15 @@
                     <img src="img/fruits/apple.png" alt="apple">
                     <h3>Apple</h3>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima provident itaque, fugit dolor nisi labore similique soluta et ab voluptates eligendi omnis porro, iste odit, repudiandae accusamus beatae cumque. Facilis.</p>
-                    <span class="prise">300</span>
+                    <span class="price">300</span>
                     <span>XOF</span>
                     <div class="element">
-                        <span class="minus">-</span>
+                        <button class="minus">-</button>
                         <span class="num">1</span>
-                        <span class="plus">+</span>
-                        <i class="fa-solid fa-heart"></i>
+                        <button class="plus">+</button>
+                    </div>
+                    <div class="like">
+                        <i id= "btn" class="fa-solid fa-heart"></i>
                     </div>
                 </div>
                 <!--box-2-->
@@ -47,13 +60,15 @@
                     <img src="img/fruits/banana.png" alt="apple">
                     <h3>Banana</h3>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima provident itaque, fugit dolor nisi labore similique soluta et ab voluptates eligendi omnis porro, iste odit, repudiandae accusamus beatae cumque. Facilis.</p>
-                    <span class="prise">700</span>
+                    <span class="price">700</span>
                     <span>XOF</span>
                     <div class="element">
-                        <span class="minus">-</span>
+                        <button class="minus">-</button>
                         <span class="num">1</span>
-                        <span class="plus">+</span>
-                        <i class="fa-solid fa-heart"></i>
+                        <button class="plus">+</button>
+                    </div>
+                    <div class="like">
+                        <i id= "btn" class="fa-solid fa-heart"></i>
                     </div>
                 </div>
                 <!--box-3-->
@@ -61,13 +76,15 @@
                     <img src="img/fruits/pineapple.png" alt="apple">
                     <h3>Pineapple</h3>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima provident itaque, fugit dolor nisi labore similique soluta et ab voluptates eligendi omnis porro, iste odit, repudiandae accusamus beatae cumque. Facilis.</p>
-                    <span class="prise">600</span>
+                    <span class="price">600</span>
                     <span>XOF</span>
                     <div class="element">
-                        <span class="minus">-</span>
+                        <button class="minus">-</button>
                         <span class="num">1</span>
-                        <span class="plus">+</span>
-                        <i class="fa-solid fa-heart"></i>
+                        <button class="plus">+</button>
+                    </div>
+                    <div class="like">
+                        <i id= "btn" class="fa-solid fa-heart"></i>
                     </div>
                 </div>
                 <!--box-4-->
@@ -75,13 +92,15 @@
                     <img src="img/fruits/orange.png" alt="apple">
                     <h3>Orange</h3>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima provident itaque, fugit dolor nisi labore similique soluta et ab voluptates eligendi omnis porro, iste odit, repudiandae accusamus beatae cumque. Facilis.</p>
-                    <span class="prise">200</span>
+                    <span class="price">200</span>
                     <span>XOF</span>
                     <div class="element">
-                        <span class="minus">-</span>
+                        <button class="minus">-</button>
                         <span class="num">1</span>
-                        <span class="plus">+</span>
-                        <i class="fa-solid fa-heart"></i>
+                        <button class="plus">+</button>
+                    </div>
+                    <div class="like">
+                        <i id= "btn" class="fa-solid fa-heart"></i>
                     </div>
                 </div>
                 <!--box-5-->
@@ -89,13 +108,15 @@
                     <img src="img/fruits/grape.png" alt="apple">
                     <h3>Grape</h3>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima provident itaque, fugit dolor nisi labore similique soluta et ab voluptates eligendi omnis porro, iste odit, repudiandae accusamus beatae cumque. Facilis.</p>
-                    <span class="prise">700</span>
+                    <span class="price">700</span>
                     <span>XOF</span>
                     <div class="element">
-                        <span class="minus">-</span>
+                        <button class="minus">-</button>
                         <span class="num">1</span>
-                        <span class="plus">+</span>
-                        <i class="fa-solid fa-heart"></i>
+                        <button class="plus">+</button>
+                    </div>
+                    <div class="like">
+                        <i id= "btn" class="fa-solid fa-heart"></i>
                     </div>
                 </div>
                 <!--box-6-->
@@ -103,13 +124,15 @@
                     <img src="img/fruits/mango.png" alt="apple">
                     <h3>Mango</h3>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima provident itaque, fugit dolor nisi labore similique soluta et ab voluptates eligendi omnis porro, iste odit, repudiandae accusamus beatae cumque. Facilis.</p>
-                    <span class="prise">250</span>
+                    <span class="price">250</span>
                     <span>XOF</span>
                     <div class="element">
-                        <span class="minus">-</span>
+                        <button class="minus">-</button>
                         <span class="num">1</span>
-                        <span class="plus">+</span>
-                        <i class="fa-solid fa-heart"></i>
+                        <button class="plus">+</button>
+                    </div>
+                    <div class="like">
+                        <i oneclick="Toggle()" id= "btn" class="fa-solid fa-heart"></i>
                     </div>
                 </div>
             </div>
