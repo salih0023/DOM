@@ -17,12 +17,14 @@ body {
     color: #e63803;
 }
 .topBar {
-    /* position: fixed; */
+    position: fixed;
     top: 0;
     left: 0;
     height: 60px;
     width: 100%;
-    background: #d5d6d6;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    z-index: 1;
 }
 .topBar {
     display: flex;
@@ -98,7 +100,7 @@ body {
     font-weight: 300;
 }
 /* PrixTotal */
-.amount {
+#amount {
     width: 150px;
     height: 30px;
     display: flex;
@@ -147,13 +149,19 @@ button:hover {
     font-size: 18px;
     font-weight: 550;
 }
-.like {
+/* likeBtn */
+#likeBtn {
     position: absolute;
     top: 20px;
 }
 .fa-solid {
     cursor: pointer;
     font-size: 20px;
+}
+.fa-solid:hover {
+    /* transform: scale(1.02); */
+    transition: .6s;
+    color: #828282;
 }
 
 /*footrt*/
